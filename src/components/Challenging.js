@@ -17,7 +17,7 @@ const ChallengignCont = styled(Container)`
 
 const Content = styled.div`
     /* //TODO: adaptiv mb max-width + width */
-    width: 530px;
+    width: 515px;
 `
 
 const Headline = styled.h2`
@@ -27,7 +27,7 @@ const Headline = styled.h2`
     font-size: 50px;
     line-height: 65px;
     letter-spacing: 0.22px;
-    margin-bottom: 40px;
+    margin-bottom: 48px;
     color: ${base.colors.headlineColor};
 `
 
@@ -37,7 +37,7 @@ const ChallengigText = styled(Text)`
 
 const PhoneWrapper = styled.div`
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     margin-bottom: 50px;
 `
 
@@ -58,6 +58,7 @@ const PhoneImage = styled.img`
 
 const PhoneTextCont = styled.div`
     margin-left: 20px;
+    padding-top: 9px;
 `
 
 const PhoneText = styled(Text)`

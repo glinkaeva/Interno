@@ -13,7 +13,7 @@ const Wrapper = styled(Container)`
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 0px 50px;
-    margin-bottom: 100px;
+    margin-bottom: 114px;
 `
 
 export default function Brands() {

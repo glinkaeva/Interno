@@ -17,8 +17,7 @@ const HeaderImage = styled.div`
 const HeaderCont = styled(Container)`
     width: 100%;
     min-height: 830px;
-    display: flex;
-    align-items: center;
+    padding-top: 188px;
 `
 
 const Content = styled.div`

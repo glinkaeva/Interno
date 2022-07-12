@@ -7,7 +7,7 @@ const Box = styled.div`
 /* //Todo: мб переделать (адаптив) */
     width: 400px;
     min-height: 395px;
-    padding: 75px 40px 0 40px;
+    padding: 75px 46px 0 47px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,12 +22,12 @@ const Headline = styled.p`
     line-height: 39px;
     text-align: center;
     letter-spacing: 0.22px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 `
 
 const WeCanText = styled(Text)`
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 36px;
 `
 
 const Link = styled.a`

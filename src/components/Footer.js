@@ -22,6 +22,15 @@ const FooterBottom = styled.div`
     text-align: center;
 `
 
+const BigBox = styled.div`
+    width: 340px;
+`
+
+const Logo = styled.img`
+    margin-top: 5px;
+    margin-bottom: 23px;
+`
+
 const Headline = styled.p`
     font-family: ${base.fontFamily.headline};
     font-style: normal;
@@ -66,12 +75,13 @@ const Span = styled.span`
     color: ${base.colors.beige};
 `
 
+
 export default function Footer() {
     return(
         <>
             <FooterCont>
-                <div style={{width: 390}}>
-                    <img src={logo} alt="" style={{marginBottom: 25}} />
+                <BigBox>
+                    <Logo src={logo} alt="logo"/>
                     <FooterText>
                         We are the leading architect and interior design firm in the world.
                     </FooterText>
@@ -81,7 +91,7 @@ export default function Footer() {
                         <a href="/"><SocialItem src={LinkedIn} alt="LinkedIn"/></a>
                         <a href="/"><SocialItem src={inst} alt="Instagram"/></a>
                     </SocialBox>
-                </div>
+                </BigBox>
                 <div>
                     <Headline>Pages</Headline>
                     <Link href="#">Style Guide</Link>

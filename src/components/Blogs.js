@@ -29,7 +29,7 @@ const TextCont = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 70px;
+    margin-bottom: 66px;
 `
 
 const Headline = styled.h2`

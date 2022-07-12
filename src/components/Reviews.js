@@ -11,7 +11,7 @@ const Section = styled(Container)`
     background: ${base.colors.lightbeige};
     border-radius: 70px;
     margin-bottom: 140px;
-    padding: 103px 50px 120px;
+    padding: 110px 50px 120px;
 `
 
 const HeadlineCont = styled.div`

@@ -6,7 +6,7 @@ import Experience from "./layout/Experience";
 const Section = styled.section`
     padding: 140px 0;
     background: ${base.colors.lightbeige};
-    margin-bottom: 130px;
+    margin-bottom: 137px;
 `
 const AchievementsContainer = styled(Container)`
     display: flex;

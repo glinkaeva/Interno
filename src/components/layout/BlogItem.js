@@ -5,7 +5,7 @@ import CircleArrow from "./common/CircleArrow";
 
 const Box = styled.div`
     max-width: 387px;
-    padding: 21px;
+    padding: 20px;
     border: 1px solid ${base.colors.lightbeige};
     border-radius: 62px;
     margin-bottom: 40px;
@@ -13,15 +13,16 @@ const Box = styled.div`
 
 const Image = styled.div`
     width: 100%;
-    min-height: 300px;
+    min-height: 290px;
     border-radius: 45px 45px 0px 0px;
     background: url(${(props)=>props.imgURL});
     background-size: cover;
 
-    padding: 25px 30px;
+    padding: 29px 24px;
 
     display: flex;
     align-items: flex-end;
+    margin-top: 10px;
     margin-bottom: 15px;
 `
 
@@ -31,6 +32,8 @@ const BlogText = styled(Text)`
 `
 
 const Headline = styled.p`
+    font-family: ${base.fontFamily.headline};
+    font-style: normal;
     font-weight: 700;
     font-size: 25px;
     line-height: 35px;
@@ -50,7 +53,7 @@ const ReadMoreCont = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 34px;
+    margin-bottom: 20px;
 `
 
 export default function BlogItem(props) {
@@ -64,7 +67,7 @@ export default function BlogItem(props) {
             <Headline>{props.title}</Headline>
             <ReadMoreCont>
                 <BlogText>{props.data}</BlogText>
-                <CircleArrow href={props.href} />
+                <CircleArrow href={props.href} width="52px" height="52px" />
             </ReadMoreCont>
         </Box>
     )

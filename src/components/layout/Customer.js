@@ -13,7 +13,7 @@ const PersonalityCont = styled.div`
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 25px;
+    margin-bottom: 28px;
 `
 
 const Image = styled.img`
@@ -45,6 +45,11 @@ const City = styled.p`
     letter-spacing: 0.22px;
 `
 
+const CustomerText = styled(Text)`
+    font-size: 20px;
+    line-height: 30px;
+`
+
 export default function Customer(props) {
     return(
         <Wrapper>
@@ -55,7 +60,7 @@ export default function Customer(props) {
                     <City>{props.city}</City>
                 </PersonalInformation>
             </PersonalityCont>
-            <Text>{props.text}</Text>
+            <CustomerText>{props.text}</CustomerText>
         </Wrapper>
     )
 }

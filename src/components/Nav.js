@@ -7,7 +7,7 @@ const NavCont = styled(Container)`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 0;
+    padding: 36px 0;
 `
 const Logo = styled.img`
     width: 100%;

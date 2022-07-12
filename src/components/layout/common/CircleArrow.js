@@ -18,7 +18,7 @@ const ArrowLink = styled.a`
 `
 export default function CircleArrow(props) {
     return(
-        <ArrowLink href={props.href}>
+        <ArrowLink href={props.href} style={{width: props.width, height: props.height}}>
             <img src={arrow} alt="arrow" />
         </ArrowLink>
     ) 
