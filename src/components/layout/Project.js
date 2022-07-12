@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import { base } from '../../styles/base'
 import { Text } from "../../styles/text";
-
-import arrow from '../../images/svg/arrow.svg'
+import CircleArrow from "./common/CircleArrow";
 
 const Wrapper = styled.div`
     min-width: 410px;
@@ -25,6 +24,7 @@ const Headline = styled.p`
     letter-spacing: 0.22px;
 
     font-family: ${base.fontFamily.headline};
+    color: ${base.colors.headlineColor};
 `
 
 const TitleCont = styled.div`
@@ -32,17 +32,6 @@ const TitleCont = styled.div`
     justify-content: space-between;
     align-items: center;
 `
-
-const ArrowLink = styled.a`
-    width: 70px;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    background: ${base.colors.lightbeige};
-`
-
 
 export default function Project(props) {
     return(
@@ -53,9 +42,7 @@ export default function Project(props) {
                     <Headline>{props.headline}</Headline>
                     <Text>{props.text}</Text>
                 </div>
-                <ArrowLink href={props.href}>
-                    <img src={arrow} alt="arrow" />
-                </ArrowLink>
+                <CircleArrow href={props.href} />
             </TitleCont>
         </Wrapper>
     )    

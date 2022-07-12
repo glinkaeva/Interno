@@ -33,6 +33,7 @@ const Name = styled.p`
     font-size: 25px;
     line-height: 38px;
     letter-spacing: 0.22px;
+    color: ${base.colors.headlineColor};
 `
 
 const City = styled.p`
@@ -42,7 +43,6 @@ const City = styled.p`
     font-size: 18px;
     line-height: 27px;
     letter-spacing: 0.22px;
-    color: ${base.colors.grey}
 `
 
 export default function Customer(props) {

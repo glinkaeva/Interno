@@ -18,7 +18,11 @@ export default createGlobalStyle`
         display: block;
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     body {
-        color: ${base.colors.black};
+        color: ${base.colors.textColor};
     }
 `

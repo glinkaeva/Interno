@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import {Container} from './layout/Container'
+import {Container} from './layout/common/Container'
 import { base } from '../styles/base'
 import Customer from "./layout/Customer"
 
@@ -24,6 +24,7 @@ const HeadlineCont = styled.div`
 const Headline = styled.h2`
     max-width: 479px;
     font-family: ${base.fontFamily.headline};
+    color: ${base.colors.headlineColor};
     font-style: normal;
     font-weight: 400;
     font-size: 45px;

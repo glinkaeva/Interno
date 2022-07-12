@@ -1,9 +1,10 @@
 import styled from "styled-components"
 import headerBg from '../images/header-bg.png'
 import { Text } from "../styles/text"
-import {Container} from './layout/Container'
+import { Container } from './layout/common/Container'
 import { base } from '../styles/base'
-import Button from "./layout/Button"
+import Button from "./layout/common/Button"
+import arrow from '../images/svg/long-arrow.svg'
 
 const HeaderImage = styled.div`
     width: 100%;
@@ -31,6 +32,7 @@ const Headline = styled.h1`
     line-height: 96px;
     letter-spacing: 0.22px;
     font-family: ${base.fontFamily.headline};
+    color: ${base.colors.headlineColor};
     margin-bottom: 20px;
 `
 
@@ -51,7 +53,7 @@ export default function Header() {
                         The world needs innovators and problem solvers who turn
                         challenges into greater opportunities.
                     </HeaderText>
-                    <Button btnText="Get Started" />
+                    <Button btnText="Get Started" arrow={arrow}/>
                 </Content>
             </HeaderCont>
         </HeaderImage>

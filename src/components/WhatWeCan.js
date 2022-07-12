@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import {Container} from './layout/Container'
+import {Container} from './layout/common/Container'
 import WeCan from "./layout/WeCan"
 
 const Section = styled.section`

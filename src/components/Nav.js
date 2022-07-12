@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Container} from './layout/Container'
+import {Container} from './layout/common/Container'
 import logo from '../images/svg/logo.svg'
 import { base } from '../styles/base'
 
@@ -21,24 +21,22 @@ const Link = styled.a`
     text-transform: capitalize;
     margin-left: 40px;
     transition: .5s;
-    color: ${base.colors.grey}
 
     &:hover {
-        color: ${base.colors.beige}
+        color: ${base.colors.beige};
     }
 `
-
 
 export default function Nav() {
     return(
         <nav>
             <NavCont>
-                <Logo src={logo} alt="logo"/>
+                <a href="/"><Logo src={logo} alt="logo"/></a>
                 <div>
                     <Link href="/">Home</Link>
                     <Link href="#about">About Us</Link>
-                    <Link href="#services">Services</Link>
-                    <Link href="#ages">Pages</Link>
+                    <Link href="#projects">Projects</Link>
+                    <Link href="#blog">Blog</Link>
                     <Link href="#contact">Contact Us</Link>
                 </div>
             </NavCont>

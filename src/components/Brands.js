@@ -6,7 +6,7 @@ import brand3 from '../images/svg/brand/brand3.svg'
 import brand4 from '../images/svg/brand/brand4.svg'
 import brand5 from '../images/svg/brand/brand5.svg'
 
-import {Container} from './layout/Container'
+import {Container} from './layout/common/Container'
 
 const Wrapper = styled(Container)`
     display: flex;

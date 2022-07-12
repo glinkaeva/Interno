@@ -3,7 +3,7 @@ import { base } from './base'
 
 export const Text = styled.p`
     font-family: ${base.fontFamily.text};
-    color: ${base.colors.grey};
+    color: ${base.colors.textColor};
     font-style: normal;
     font-weight: 400;
     font-size: 22px;

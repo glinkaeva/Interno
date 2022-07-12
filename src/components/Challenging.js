@@ -1,19 +1,18 @@
 import styled from "styled-components"
-import {Container} from './layout/Container'
+import {Container} from './layout/common/Container'
 import { base } from '../styles/base'
 import { Text } from "../styles/text"
-import Button from "./layout/Button"
+import Button from "./layout/common/Button"
 import phone from '../images/svg/phone.svg'
 import kitchen from '../images/challenging.png'
+import arrow from '../images/svg/long-arrow.svg'
 
-const Section = styled.section`
-    margin-bottom: 140px;
-`
 const ChallengignCont = styled(Container)`
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 140px;
 `
 
 const Content = styled.div`
@@ -29,6 +28,7 @@ const Headline = styled.h2`
     line-height: 65px;
     letter-spacing: 0.22px;
     margin-bottom: 40px;
+    color: ${base.colors.headlineColor};
 `
 
 const ChallengigText = styled(Text)`
@@ -62,7 +62,6 @@ const PhoneTextCont = styled.div`
 
 const PhoneText = styled(Text)`
     font-size: 24px;
-    color: ${base.colors.grey}
 `
 
 const Image = styled.img`
@@ -73,29 +72,27 @@ const Image = styled.img`
 
 export default function Challengign() {
     return(
-        <Section>
-            <ChallengignCont>
-                <Content>
-                    <Headline>
-                        We Tackle The Most Challenging Designs
-                    </Headline>
-                    <ChallengigText>
-                        The world needs innovators and problem solvers who turn challenges into greater opportunities. We have
-                        an insatiable curiosity about transformative trends challenging the status.
-                    </ChallengigText>
-                    <PhoneWrapper>
-                        <Link href="tel: 012345678">
-                            <PhoneImage src={phone} alt="phone" />
-                        </Link>
-                        <PhoneTextCont>
-                            <PhoneText>012345678</PhoneText>
-                            <Text>Call Us Anytime</Text>
-                        </PhoneTextCont>
-                    </PhoneWrapper>
-                    <Button btnText="Get Free Estimate" />
-                </Content>
-                <Image src={kitchen} alt="kitchen design" />
-            </ChallengignCont>
-        </Section>
+        <ChallengignCont id="about">
+            <Content>
+                <Headline>
+                    We Tackle The Most Challenging Designs
+                </Headline>
+                <ChallengigText>
+                    The world needs innovators and problem solvers who turn challenges into greater opportunities. We have
+                    an insatiable curiosity about transformative trends challenging the status.
+                </ChallengigText>
+                <PhoneWrapper>
+                    <Link href="tel: 012345678">
+                        <PhoneImage src={phone} alt="phone" />
+                    </Link>
+                    <PhoneTextCont>
+                        <PhoneText>012345678</PhoneText>
+                        <Text>Call Us Anytime</Text>
+                    </PhoneTextCont>
+                </PhoneWrapper>
+                <Button btnText="Get Free Estimate" arrow={arrow}/>
+            </Content>
+            <Image src={kitchen} alt="kitchen design" />
+        </ChallengignCont>
     )
 }

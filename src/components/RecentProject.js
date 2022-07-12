@@ -1,13 +1,20 @@
 import styled from "styled-components";
 import { base } from '../styles/base'
 import { Text } from "../styles/text";
-import {Container} from './layout/Container'
+import {Container} from './layout/common/Container'
 import Project from "./layout/Project";
 
 import project1 from '../images/project/project1.png'
 import project2 from '../images/project/project2.png'
 import project3 from '../images/project/project3.png'
 import project4 from '../images/project/project4.png'
+
+const projectData = [
+    {id: 1, src: project1, headline: 'Winery Dry Creek Building', text: 'Art Modern', href: '#'},
+    {id: 2, src: project2, headline: 'Creative Workplace Design', text: 'Minimalist', href: '#'},
+    {id: 3, src: project3, headline: 'Bedroom Interior Pot Work', text: 'Modern', href: '#'},
+    {id: 4, src: project4, headline: 'Light Ambience Sepia Design', text: 'Scandinavian', href: '#'},
+]
 
 const ProjectContainer = styled(Container)`
     margin-bottom: 80px;
@@ -22,6 +29,7 @@ const TextCont = styled.div`
 
 const Headline = styled.h2`
     font-family: ${base.fontFamily.headline};
+    color: ${base.colors.headlineColor};
     font-style: normal;
     font-weight: 400;
     font-size: 47px;
@@ -45,7 +53,7 @@ const Box = styled.div`
 
 export default function RecentProject() {
     return(
-        <ProjectContainer>
+        <ProjectContainer id="projects">
             <TextCont>
                 <Headline>Recent Projects</Headline>
                 <ProjectText>
@@ -54,48 +62,20 @@ export default function RecentProject() {
                 </ProjectText>
             </TextCont>
             <Box>
-                <Project 
-                    src={project1}
-                    alt="Winery Dry Creek Building"
-                    headline="Winery Dry Creek Building"
-                    text="Art Modern"
-                    href="#"
-                />
-                <Project 
-                    src={project2}
-                    alt="Creative Workplace Design"
-                    headline="Creative Workplace Design"
-                    text="Minimalist"
-                    href="#"
-                />
-                <Project 
-                    src={project3}
-                    alt="Bedroom Interior Pot Work"
-                    headline="Bedroom Interior Pot Work"
-                    text="Modern"
-                    href="#"
-                />
-                <Project 
-                    src={project4}
-                    alt="Light Ambience Sepia Design"
-                    headline="Light Ambience Sepia Design"
-                    text="Scandinavian"
-                    href="#"
-                />
+                {
+                    projectData.map(({id, src, headline, text, href}) => 
+                        <Project 
+                            key={id}
+                            src={src}
+                            headline={headline}
+                            text={text}
+                            href={href}
+                            alt={headline}
+                        />
+                    )
+                }
             </Box>
         </ProjectContainer>
         
     )
 }
-
-/*
-
-<Project 
-    src={project1}
-    alt="Winery Dry Creek Building"
-    headline="Winery Dry Creek Building"
-    text="Art Modern"
-    href="#"
-/>
-
-*/

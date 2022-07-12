@@ -15,6 +15,7 @@ const Box = styled.div`
 
 const Headline = styled.p`
     font-family: ${base.fontFamily.headline};
+    color: ${base.colors.headlineColor};
     font-style: normal;
     font-weight: 400;
     font-size: 25px;
@@ -37,7 +38,6 @@ const Link = styled.a`
     text-align: center;
     letter-spacing: 0.36px;
     display: flex;
-    color: ${base.colors.grey}
 `
 
 const Arrow = styled.img`

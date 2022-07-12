@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { base } from "../styles/base";
-import { Container } from './layout/Container'
+import { Container } from './layout/common/Container'
 import Experience from "./layout/Experience";
 
 const Section = styled.section`
     padding: 140px 0;
     background: ${base.colors.lightbeige};
+    margin-bottom: 130px;
 `
 const AchievementsContainer = styled(Container)`
     display: flex;
