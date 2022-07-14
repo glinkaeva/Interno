@@ -9,10 +9,14 @@ const JoinCont = styled(Container)`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px 0;
+    padding: 100px 40px;
     background: ${base.colors.headlineColor};
     border-radius: 70px;
     margin-bottom: 80px;
+
+    @media(max-width: 768px) {
+        margin-bottom: 40px;
+    }
 `
 
 const Headline = styled.h2`
@@ -26,6 +30,20 @@ const Headline = styled.h2`
     color: #FFFFFF;
 
     margin-bottom: 10px;
+
+    @media(max-width: 1100px){
+        font-size: 44px;
+    }
+
+    @media(max-width: 520px) {
+        font-size: 38px;
+        line-height: 55px;
+    }
+
+    @media(max-width: 520px) {
+        font-size: 32px;
+        line-height: 45px;
+    }
 `
 
 const JoinText = styled(Text)`

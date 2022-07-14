@@ -9,6 +9,20 @@ const Box = styled.div`
     border: 1px solid ${base.colors.lightbeige};
     border-radius: 62px;
     margin-bottom: 40px;
+
+    @media(max-width: 1280px) {
+        padding: 20px 20px 0 20px;
+        max-width: 350px;
+    }
+
+    @media(max-width: 1140px) {
+        max-width: 48%;
+    }
+
+    @media(max-width: 660px) {
+        width: 100%;
+        max-width: 100%;
+    }
 `
 
 const Image = styled.div`
@@ -24,6 +38,10 @@ const Image = styled.div`
     align-items: flex-end;
     margin-top: 10px;
     margin-bottom: 15px;
+
+    @media(max-width: 768px) {
+        min-height: 240px;
+    }
 `
 
 const BlogText = styled(Text)`
@@ -34,12 +52,27 @@ const BlogText = styled(Text)`
 const Headline = styled.p`
     font-family: ${base.fontFamily.headline};
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 25px;
     line-height: 35px;
     letter-spacing: 0.5px;
     color: ${base.colors.headlineColor};
     margin-bottom: 20px;
+
+    @media(max-width: 1280px) {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    @media(max-width: 1280px) {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    @media(max-width: 768px) {
+        font-size: 18px;
+        line-height: 24px;
+    }
 `
 
 const WhiteBlock = styled.div`

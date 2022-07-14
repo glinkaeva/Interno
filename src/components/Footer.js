@@ -12,23 +12,53 @@ import inst from '../images/svg/social/inst.svg'
 const FooterCont = styled(Container)`
     padding-top: 50px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 80px;
+
+    @media(max-width: 1140px) {
+        & div+div {
+            margin: 0px 0px 40px 20px;
+        }
+        margin-bottom: 40px;
+    }
+
+    @media(max-width: 768px) {
+        & div+div {
+            margin: 0px 0px 40px 10px;
+        }
+
+        margin-bottom: 20px;
+    }
+
+    @media(max-width: 540px) {
+        & div+div {
+            margin: 0px;
+            margin-bottom: 40px;
+        }
+
+        margin-bottom: 0px;
+    }
 `
 
 const FooterBottom = styled.div`
-    padding: 35px 0;
+    padding: 35px 40px;
     border-top: 1px solid ${base.colors.lightbeige};
     text-align: center;
 `
 
 const BigBox = styled.div`
     width: 340px;
+    margin-bottom: 40px;
 `
 
 const Logo = styled.img`
     margin-top: 5px;
     margin-bottom: 23px;
+
+    @media(max-width: 768px) {
+        width: 140px;
+    }
 `
 
 const Headline = styled.p`
@@ -40,6 +70,11 @@ const Headline = styled.p`
     letter-spacing: 0.22px;
     color: ${base.colors.headlineColor};
     margin-bottom: 20px;
+
+    @media(max-width: 768px) {
+        font-size: 22px;
+        line-height: 32px;
+    }
 `
 
 const FooterText = styled(Text)`
@@ -61,6 +96,16 @@ const Link = styled.a`
     &:hover {
         color: ${base.colors.beige};
     }
+
+    @media(max-width: 1140px) {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    @media(max-width: 768px) {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
 `
 
 const SocialBox = styled.div`
@@ -74,7 +119,13 @@ const SocialItem = styled.img`
 const Span = styled.span`
     color: ${base.colors.beige};
 `
+const Contact = styled.div`
+    width: 300px;
 
+    @media(max-width: 470px) {
+        width: 100%;
+    }
+`
 
 export default function Footer() {
     return(
@@ -108,12 +159,12 @@ export default function Footer() {
                     <Link href="#">Our Projects</Link>
                     <Link href="#">Contact Us</Link>
                 </div>
-                <div style={{width: 300}}>
+                <Contact>
                     <Headline>Contact</Headline>
                     <Link href="http://surl.li/ckkqq" target="_blank">53, East Birchwood Ave. Brooklyn, New York 11201, USA.</Link>
                     <Link href="contact@interno.com">contact@interno.com</Link>
                     <Link href="tel: 1234567890">(123) 456 - 7890</Link>
-                </div>
+                </Contact>
             </FooterCont>
             <FooterBottom>
                 <Text>

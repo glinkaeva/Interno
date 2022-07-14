@@ -4,6 +4,14 @@ import WeCan from "./layout/WeCan"
 
 const Section = styled.section`
     margin: 100px 0;
+
+    @media(max-width: 1080px) {
+        margin: 80px 0;
+    }
+
+    @media(max-width: 768px) {
+        margin: 40px 0;
+    }
 `
 
 const WhatWeCanCont = styled(Container)`

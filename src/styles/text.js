@@ -9,4 +9,12 @@ export const Text = styled.p`
     font-size: 22px;
     line-height: 33px;
     letter-spacing: 0.22px;
+
+    @media(max-width: 1140px) {
+        font-size: 20px;
+    }
+
+    @media(max-width: 768px) {
+        font-size: 18px;
+    }
 `

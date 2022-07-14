@@ -13,11 +13,42 @@ const HeaderImage = styled.div`
 
     background: url(${headerBg});
     background-size: cover;
+
+    @media(max-width: 960px) {
+        background-position: center left;
+    }
+
+    @media(max-width: 860px) {
+        min-height: 0px;
+        height: 730px;
+        padding-top: 100px;
+        border-radius: 0px 0px 0px 150px;
+    }
+
+    @media(max-width: 768px) { 
+        border-radius: 0px 0px 0px 120px; 
+        height: 680px;
+        padding-top: 80px;
+    }
+    @media(max-width: 580px) { 
+        border-radius: 0px 0px 0px 100px; 
+        height: 580px;
+        padding-top: 60px;
+    }
+    @media(max-width: 480px) { 
+        border-radius: 0px 0px 0px 80px; 
+        height: 500px;
+        padding-top: 20px;
+    }
 `
 const HeaderCont = styled(Container)`
-    width: 100%;
     min-height: 830px;
     padding-top: 188px;
+
+    @media(max-width: 860px) {
+        min-height: 730px;
+        padding-top: 100px;
+    }
 `
 
 const Content = styled.div`
@@ -33,6 +64,26 @@ const Headline = styled.h1`
     font-family: ${base.fontFamily.headline};
     color: ${base.colors.headlineColor};
     margin-bottom: 20px;
+
+    @media(max-width: 1140px) {
+        font-size: 72px;
+        line-height: 76px;
+    }
+
+    @media(max-width: 690px) {
+        font-size: 64px;
+        line-height: 76px;
+    }
+
+    @media(max-width: 580px) {
+        font-size: 54px;
+        line-height: 66px;
+    }
+
+    @media(max-width: 480px) {
+        font-size: 36px;
+        line-height: 40px;
+    }
 `
 
 const HeaderText = styled(Text)`

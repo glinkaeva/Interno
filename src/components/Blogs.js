@@ -23,6 +23,14 @@ const blogsData = [
 
 const BlogsContainer = styled(Container)`
     margin-bottom: 100px;
+
+    @media(max-width: 1080px) {
+        margin-bottom: 80px;
+    }
+
+    @media(max-width: 768px) {
+        margin-bottom: 40px;
+    }
 `
 
 const TextCont = styled.div`
@@ -30,6 +38,10 @@ const TextCont = styled.div`
     flex-direction: column;
     align-items: center;
     margin-bottom: 66px;
+
+    @media(max-width: 768px) {
+        margin-bottom: 40px;
+    }
 `
 
 const Headline = styled.h2`
@@ -43,6 +55,20 @@ const Headline = styled.h2`
     letter-spacing: 0.22px;
 
     margin-bottom: 20px;
+
+    @media(max-width: 1100px){
+        font-size: 44px;
+    }
+
+    @media(max-width: 520px) {
+        font-size: 38px;
+        line-height: 55px;
+    }
+
+    @media(max-width: 520px) {
+        font-size: 32px;
+        line-height: 45px;
+    }
 `
 
 const BlogsText = styled(Text)`

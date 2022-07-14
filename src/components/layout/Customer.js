@@ -3,10 +3,32 @@ import { base } from "../../styles/base";
 import { Text } from "../../styles/text";
 
 const Wrapper = styled.div`
-    width: 354px;
+    width: 100%;
+    max-width: 354px;
     padding: 50px 35px 45px;
     background: white;
     border-radius: 30px;
+
+    @media(max-width: 1180px) {
+        max-width: 320px;
+        margin-bottom: 40px;
+    }
+
+    @media(max-width: 1080px) {
+        max-width: 48%;
+    }
+
+    @media(max-width: 768px) {
+        max-width: 100%;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+
+    @media(max-width: 360px){
+        padding: 30px 20px 30px;
+    }
 `
 
 const PersonalityCont = styled.div`

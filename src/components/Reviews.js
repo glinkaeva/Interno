@@ -12,6 +12,26 @@ const Section = styled(Container)`
     border-radius: 70px;
     margin-bottom: 140px;
     padding: 110px 50px 120px;
+
+    @media(max-width: 1080px) {
+        padding: 60px 40px 60px;
+        margin-bottom: 100px;
+    }
+
+    @media(max-width: 768px) {
+        max-width: 100%;
+        border-radius: 60px;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+
+        margin-bottom: 60px;
+    }
+
+    @media(max-width: 540px) {
+        padding: 40px 20px 40px;
+    }
 `
 
 const HeadlineCont = styled.div`
@@ -31,11 +51,32 @@ const Headline = styled.h2`
     line-height: 58px;
     letter-spacing: 0.22px;
     margin-bottom: 45px;
+
+    @media(max-width: 1100px){
+        font-size: 44px;
+    }
+
+    @media(max-width: 520px) {
+        font-size: 38px;
+        line-height: 55px;
+    }
+
+    @media(max-width: 520px) {
+        font-size: 32px;
+        line-height: 45px;
+    }
+
+    @media(max-width: 400px) {
+        font-size: 28px;
+    }
 `
 const Customers = styled.div`
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+
+    @media(max-width: 1180px) {
+        flex-wrap: wrap;
+    }
 `
 
 export default function Reviews() {

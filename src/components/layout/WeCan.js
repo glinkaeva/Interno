@@ -4,13 +4,28 @@ import { base } from '../../styles/base'
 import { Text } from "../../styles/text"
 
 const Box = styled.div`
-/* //Todo: мб переделать (адаптив) */
-    width: 400px;
+    min-width: 320px;
+    width: 100%;
+    max-width: 400px;
     min-height: 395px;
     padding: 75px 46px 0 47px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media(max-width: 1280px) {
+        max-width: 370px;
+        padding: 55px 26px 0 27px;
+    }
+
+    @media(max-width: 1190px) {
+        max-width: 50%;
+    }
+
+    @media(max-width: 860px) {
+        max-width: 100%;
+        min-height: 320px;
+    }
 `
 
 const Headline = styled.p`

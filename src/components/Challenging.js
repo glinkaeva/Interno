@@ -4,7 +4,7 @@ import { base } from '../styles/base'
 import { Text } from "../styles/text"
 import Button from "./layout/common/Button"
 import phone from '../images/svg/phone.svg'
-import kitchen from '../images/challenging.png'
+import kitchen from '../images/challenging.jpg'
 import arrow from '../images/svg/long-arrow.svg'
 
 const ChallengignCont = styled(Container)`
@@ -13,11 +13,35 @@ const ChallengignCont = styled(Container)`
     align-items: center;
     justify-content: space-between;
     margin-bottom: 140px;
+
+    @media(max-width: 1080px) {
+        margin-bottom: 100px;
+    }
+
+    @media(max-width: 768px) {
+        margin-bottom: 60px;
+    }
 `
 
 const Content = styled.div`
-    /* //TODO: adaptiv mb max-width + width */
-    width: 515px;
+    width: 100%;
+    max-width: 515px;
+
+    @media(max-width: 1100px){
+        max-width: 46%;
+    }
+
+    @media(max-width: 960px){
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    @media(max-width: 768px){
+        display: block;
+    }
 `
 
 const Headline = styled.h2`
@@ -29,6 +53,20 @@ const Headline = styled.h2`
     letter-spacing: 0.22px;
     margin-bottom: 48px;
     color: ${base.colors.headlineColor};
+
+    @media(max-width: 1100px){
+        font-size: 44px;
+    }
+
+    @media(max-width: 520px) {
+        font-size: 38px;
+        line-height: 55px;
+    }
+
+    @media(max-width: 520px) {
+        font-size: 32px;
+        line-height: 45px;
+    }
 `
 
 const ChallengigText = styled(Text)`
@@ -65,10 +103,36 @@ const PhoneText = styled(Text)`
     font-size: 24px;
 `
 
-const Image = styled.img`
+const Image = styled.div`
     width: 49%;
-    max-height: 635px;
+    height: 635px;
     border-radius: 0px 326px 0px 123px;
+    background: url(${kitchen});
+    background-size: cover;
+
+    @media(max-width: 1140px){
+        height: 580px;
+    }
+
+    @media(max-width: 960px){
+        width: 100%;
+        height: 580px;
+        margin-bottom: 60px;
+        border-radius: 0px 256px 0px 83px;
+        order: -1;
+        background-position: center;
+    }
+
+    @media(max-width: 768px){
+        height: 450px;
+        border-radius: 0px 156px 0px 63px;
+    }
+
+    @media(max-width: 520px) {
+        height: 350px;
+        border-radius: 0px 100px 0px 33px;
+    }
+
 `
 
 export default function Challengign() {
@@ -91,9 +155,9 @@ export default function Challengign() {
                         <Text>Call Us Anytime</Text>
                     </PhoneTextCont>
                 </PhoneWrapper>
-                <Button btnText="Get Free Estimate" arrow={arrow}/>
+                <Button btnText="Get Free Estimate" arrow={arrow} />
             </Content>
-            <Image src={kitchen} alt="kitchen design" />
+            <Image/>
         </ChallengignCont>
     )
 }
