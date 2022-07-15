@@ -14,6 +14,7 @@ const FormWrapper = styled.form`
     padding: 40px;
     background: ${base.colors.lightbeige};
     border-radius: 60px 60px 60px 0px;
+    z-index: 10;
 
     display: flex;
     flex-direction: column;
@@ -40,9 +41,9 @@ const FormWrapper = styled.form`
     }
 
     @media(max-width: 480px){
-        left: 0;
         width: 98%;
-        left: 2%;
+        top: 1%;
+        left: 1%;
     }
 `
 
@@ -108,7 +109,7 @@ const Input = styled.input`
     }
 
     @media(max-width: 480px){
-        height: 40px;
+        height: 35px;
         padding: 0px 15px;
         margin-bottom: 15px;
     }

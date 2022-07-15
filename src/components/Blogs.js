@@ -17,7 +17,7 @@ const blogsData = [
     {id: 2, img: blogImage2, place: 'Living Room', title: 'How To Choose The Best Wall Art & Decor House?', data: 'November 22, 2022', href: '#'},
     {id: 3, img: blogImage3, place: 'Minimalist Interior', title: 'Tips To Increase The Interior Value Of Your House', data: 'November 21, 2022', href: '#'},
     {id: 4, img: blogImage4, place: 'Kitchen Design', title: 'Best Solution For Any Office & Business Interior', data: 'November 18, 2022', href: '#'},
-    {id: 5, img: blogImage5, place: 'Living Room', title: 'Get Solution For Building Construction Work', data: 'November 17, 2022', href: ''},
+    {id: 5, img: blogImage5, place: 'Living Room', title: 'Get Solution For Building Construction Work', data: 'November 17, 2022', href: '#'},
     {id: 6, img: blogImage6, place: 'Minimalist Interior', title: 'Attain The Best Finish For The Kitchen Cabinets', data: 'November 16, 2022', href: '#'},
 ]
 
