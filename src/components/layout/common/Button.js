@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { base } from '../../../styles/base'
 
-const Btn = styled.button`
+const Btn = styled.a`
+    width: fit-content;
     background: ${base.colors.headlineColor};
     font-family: ${base.fontFamily.text};
     font-size: 18px;
@@ -37,6 +38,10 @@ const Btn = styled.button`
     &:hover {
         transform: scale(1.05);
     }
+
+    @media(max-width: 768px) {
+        padding: 15px 15px 15px 25px;
+    }
 `
 
 const Arrow = styled.img`
@@ -45,7 +50,7 @@ const Arrow = styled.img`
 
 export default function Button(props) {
     return(
-        <Btn style={{background: props.bg}}>
+        <Btn style={{background: props.bg}} href={props.href} onClick={props.click}>
             {props.btnText}
             <Arrow src={props.arrow} alt="arrow"/>
         </Btn>

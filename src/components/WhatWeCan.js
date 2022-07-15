@@ -23,7 +23,7 @@ const WhatWeCanCont = styled(Container)`
 
 export default function WhatWeCan() {
     return(
-        <Section>
+        <Section id="weCan">
             <WhatWeCanCont>
                 <WeCan 
                     headline="Interior Design"

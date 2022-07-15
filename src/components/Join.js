@@ -4,6 +4,9 @@ import { Container } from './layout/common/Container'
 import Button from "./layout/common/Button";
 import { Text } from "../styles/text";
 import arrow from '../images/svg/long-arrow-black.svg'
+import FormFeedback from './FormFeedback';
+
+import { useState } from "react";
 
 const JoinCont = styled(Container)`
     display: flex;
@@ -16,6 +19,7 @@ const JoinCont = styled(Container)`
 
     @media(max-width: 768px) {
         margin-bottom: 40px;
+        padding: 100px 20px;
     }
 `
 
@@ -53,11 +57,15 @@ const JoinText = styled(Text)`
 `
 
 export default function Join() {
+
+    const [openForm, setOpenForm] = useState(false)
+
     return(
         <JoinCont id="contact">
             <Headline>Wanna join the interno?</Headline>
             <JoinText>Contact Us & Get a Free Consultation</JoinText>
-            <Button bg={base.colors.beige} btnText="Connect With us" arrow={arrow}/>
+            <Button click={() => setOpenForm(true)} bg={base.colors.beige} btnText="Connect With Us" arrow={arrow}/>
+            <FormFeedback openForm={openForm} closeForm={() => setOpenForm(false)} sendForm={() => {setOpenForm(false); alert('Спасибо за ваше обращение! Мы свяжемся с вами в ближайшее время =)')}}/>
         </JoinCont>
     )
 }

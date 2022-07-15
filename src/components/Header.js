@@ -32,13 +32,11 @@ const HeaderImage = styled.div`
     }
     @media(max-width: 580px) { 
         border-radius: 0px 0px 0px 100px; 
-        height: 580px;
-        padding-top: 60px;
+        height: 600px;
+        padding-top: 40px;
     }
     @media(max-width: 480px) { 
         border-radius: 0px 0px 0px 80px; 
-        height: 500px;
-        padding-top: 20px;
     }
 `
 const HeaderCont = styled(Container)`
@@ -81,8 +79,8 @@ const Headline = styled.h1`
     }
 
     @media(max-width: 480px) {
-        font-size: 36px;
-        line-height: 40px;
+        font-size: 42px;
+        line-height: 50px;
     }
 `
 
@@ -92,7 +90,7 @@ const HeaderText = styled(Text)`
 
 export default function Header() {
     return(
-        <HeaderImage>
+        <HeaderImage id="header">
             <HeaderCont>
                 <Content>
                     <Headline>
@@ -103,7 +101,7 @@ export default function Header() {
                         The world needs innovators and problem solvers who turn
                         challenges into greater opportunities.
                     </HeaderText>
-                    <Button btnText="Get Started" arrow={arrow}/>
+                    <Button btnText="Get Started" arrow={arrow} href="#weCan"/>
                 </Content>
             </HeaderCont>
         </HeaderImage>

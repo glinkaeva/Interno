@@ -2,8 +2,15 @@ import styled from "styled-components"
 import {Container} from './layout/common/Container'
 import logo from '../images/svg/logo.svg'
 import { base } from '../styles/base'
-import { useRef, useState } from "react"
+import { useState } from "react"
 
+const linkData = [
+    {id: 1, href: '#header', text: 'Home'},
+    {id: 2, href: '#about', text: 'About Us'},
+    {id: 3, href: '#projects', text: 'Projects'},
+    {id: 4, href: '#blog', text: 'Blog'},
+    {id: 5, href: '#contact', text: 'Contact Us'},
+]
 
 const NavCont = styled(Container)`
     display: flex;
@@ -13,9 +20,10 @@ const NavCont = styled(Container)`
     padding-bottom: 36px;
 
     @media(max-width: 860px) {
-        position: absolute;
-        transition: 0.5s;
-        transform: ${({open}) => open ? 'scaleY(1)' : 'scaleY(0)'};
+        position: fixed;
+        transition: 0.6s ease-in-out;
+        /* transform: ${({open}) => open ? 'scaleX(1)' : 'scaleX(0)'}; */
+        transform: ${({open}) => open ? 'translateX(0px)' : 'translate(1000px)'};
 
         flex-direction: column;
         align-items: flex-start;
@@ -39,6 +47,7 @@ const Logo = styled.img`
 
     @media(max-width: 860px) {
         width: 80%;
+        margin-bottom: 10px;
     }
 `
 const Link = styled.a`
@@ -66,59 +75,75 @@ const Link = styled.a`
 `
 
 const Burger = styled.div`
-    width: 30px;
-    height: 25px;
-    position: absolute;
-    right: 40px;
-    top: 40px;
+    width: 25px;
+    height: 20px;
+    position: fixed;
+    right: 30px;
+    top: 30px;
     z-index: 6;
 
     display: none;
     flex-direction: column;
     justify-content: space-between;
 
+    cursor: pointer;
+
     @media (max-width: 860px) {
         display: flex;
     }
 
     @media(max-width: 768px) {
-        right: 30px;
-        top: 30px;
+        right: 20px;
+        top: 20px;
     }
 
     @media(max-width: 540px) {
-        right: 20px;
-        top: 20px;
+        right: 15px;
+        top: 15px;
     }
 `
 
 const BurgerItem = styled.div`
     width: 100%;
-    height: 5px;
+    height: 4px;
     background: ${base.colors.headlineColor};
+    transition: 0.5s;
+
+    cursor: pointer;
+
+    &:first-child{
+        transform: ${({open}) => open ? 'rotate(45deg) translateX(11px)' : 'rotate(0deg)'};
+    }
+
+    &:nth-child(2){
+        opacity: ${({open}) => open ? '0' : '1'};
+    }
+
+    &:last-child{
+        transform: ${({open}) => open ? 'rotate(-45deg) translateX(12px)' : 'rotate(0deg)'};
+    }
 `
 
 export default function Nav() {
 
     const [open, setOpen] = useState(false)
-    const burgerToggler = useRef(null)
 
     return(
         <nav>
-            <NavCont ref={burgerToggler} open={open}>
+            <NavCont open={open}>
                 <a href="/"><Logo src={logo} alt="logo"/></a>
                 <LinkCont>
-                    <Link href="/">Home</Link>
-                    <Link href="#about">About Us</Link>
-                    <Link href="#projects">Projects</Link>
-                    <Link href="#blog">Blog</Link>
-                    <Link href="#contact">Contact Us</Link>
+                    {
+                        linkData.map(({id, href, text}) => 
+                            <Link key={id} href={href} onClick={() => setOpen(false)}>{text}</Link>
+                        )
+                    }
                 </LinkCont>
             </NavCont>
             <Burger onClick={() => setOpen(!open)} >
-                <BurgerItem />
-                <BurgerItem />
-                <BurgerItem />
+                <BurgerItem open={open}/>
+                <BurgerItem open={open}/>
+                <BurgerItem open={open}/>
             </Burger>
         </nav>
     )

@@ -151,11 +151,11 @@ export default function Challengign() {
                         <PhoneImage src={phone} alt="phone" />
                     </Link>
                     <PhoneTextCont>
-                        <PhoneText>012345678</PhoneText>
+                        <PhoneText><a href="tel: 012345678">012345678</a></PhoneText>
                         <Text>Call Us Anytime</Text>
                     </PhoneTextCont>
                 </PhoneWrapper>
-                <Button btnText="Get Free Estimate" arrow={arrow} />
+                <Button btnText="Get Free Estimate" arrow={arrow} href="tel: 012345678"/>
             </Content>
             <Image/>
         </ChallengignCont>
